@@ -4,9 +4,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.mimi.povely.MainActivity">
+    tools:context="com.example.mimi.povely.MainActivity"
+    android:background="#fff">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:gravity="center_horizontal"
+        android:text="Povely"
+        android:textColor="#333"
+        android:textSize="27dp"
+        android:background="@drawable/border_top"/>
     <LinearLayout
+        android:id="@+id/bottom_bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true">
@@ -14,23 +26,40 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="홈"/>
+            android:layout_weight="1"
+            android:background="#fff"
+            android:text="홈"
+            android:textColor="#555"/>
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="일기"/>
+            android:layout_weight="1"
+            android:background="#fff"
+            android:text="일기"
+            android:textColor="#555"/>
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="갤러리"/>
+            android:layout_weight="1"
+            android:background="#fff"
+            android:text="갤러리"
+            android:textColor="#555"/>
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="설정"/>
-
+            android:layout_weight="1"
+            android:background="#fff"
+            android:text="설정"
+            android:textColor="#555"/>
     </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#ffcccccc"
+        android:layout_above="@id/bottom_bar">
+    </View>
 
 </RelativeLayout>
