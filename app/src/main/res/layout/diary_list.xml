@@ -17,23 +17,14 @@
         android:textColor="#333"
         android:textSize="27dp"
         android:background="@drawable/border_top"/>
-
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="커버 설정"
-        android:onClick="coverImageButton"/>
-
-
     <LinearLayout
-        android:id="@+id/bottom_bar"
+        android:id="@+id/bottom_bar_in_diary_list"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true">
 
         <Button
-            android:id="@+id/to_home"
+            android:id="@+id/to_home_in_diary_list"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -42,7 +33,7 @@
             android:textColor="#555"/>
 
         <Button
-            android:id="@+id/to_diary"
+            android:id="@+id/to_diary_in_diary_list"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -51,7 +42,7 @@
             android:textColor="#555"/>
 
         <Button
-            android:id="@+id/to_gallery"
+            android:id="@+id/to_gallery_in_diary_list"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -60,7 +51,7 @@
             android:textColor="#555"/>
 
         <Button
-            android:id="@+id/to_settings"
+            android:id="@+id/to_settings_in_diary_list"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -72,7 +63,7 @@
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="#ffcccccc"
-        android:layout_above="@id/bottom_bar">
+        android:layout_above="@id/bottom_bar_in_diary_list">
     </View>
 
 </RelativeLayout>
