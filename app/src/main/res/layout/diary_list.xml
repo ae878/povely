@@ -7,7 +7,9 @@
     tools:context="com.example.mimi.povely.MainActivity"
     android:background="#fff">
 
+
     <TextView
+        android:id="@+id/top_bar_in_diary_list"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingTop="10dp"
@@ -65,5 +67,15 @@
         android:background="#ffcccccc"
         android:layout_above="@id/bottom_bar_in_diary_list">
     </View>
-
+    <Button
+        android:id="@+id/to_diary_new"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/round_btn"
+        android:text="+"
+        android:textSize="40dp"
+        android:layout_alignParentRight="true"
+        android:layout_above="@id/bottom_bar_in_diary_list"
+        android:layout_marginBottom="9dp"
+        android:layout_marginRight="5dp"/>
 </RelativeLayout>
