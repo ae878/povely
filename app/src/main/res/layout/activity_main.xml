@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.mimi.povely.MainActivity"
+    android:id="@+id/cover"
     android:background="#fff">
 
     <TextView
@@ -23,7 +24,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="커버 설정"
-        android:onClick="coverImageButton"/>
+        android:id="@+id/coverSetting"
+        android:onClick="onClickCoverImageSetting"/>
 
 
     <LinearLayout
@@ -68,6 +70,7 @@
             android:text="설정"
             android:textColor="#555"/>
     </LinearLayout>
+
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
