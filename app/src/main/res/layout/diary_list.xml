@@ -18,7 +18,14 @@
         android:text="Povely"
         android:textColor="#333"
         android:textSize="27dp"
-        android:background="@drawable/border_top"/>
+        android:background="#fff"/>
+    <View
+        android:id="@+id/top_bar_divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#ffcccccc"
+        android:layout_below="@id/top_bar_in_diary_list">
+    </View>
     <LinearLayout
         android:id="@+id/bottom_bar_in_diary_list"
         android:layout_width="match_parent"
@@ -62,6 +69,7 @@
             android:textColor="#555"/>
     </LinearLayout>
     <View
+        android:id="@+id/bottom_bar_divider"
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="#ffcccccc"
@@ -78,4 +86,12 @@
         android:layout_above="@id/bottom_bar_in_diary_list"
         android:layout_marginBottom="9dp"
         android:layout_marginRight="5dp"/>
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:dividerHeight="1dp"
+        android:divider="#ddd"
+        android:layout_below="@id/top_bar_divider"
+        android:layout_above="@id/bottom_bar_divider">
+    </ListView>
 </RelativeLayout>

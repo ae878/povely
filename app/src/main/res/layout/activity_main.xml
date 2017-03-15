@@ -9,6 +9,7 @@
     android:background="#fff">
 
     <TextView
+        android:id="@+id/top_bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingTop="10dp"
@@ -17,8 +18,13 @@
         android:text="Povely"
         android:textColor="#333"
         android:textSize="27dp"
-        android:background="@drawable/border_top"/>
-
+        android:background="#fff"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#ffcccccc"
+        android:layout_below="@id/top_bar">
+    </View>
 
     <Button
         android:layout_width="wrap_content"
