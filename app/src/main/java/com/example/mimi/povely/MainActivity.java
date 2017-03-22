@@ -4,19 +4,24 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
+import android.media.Image;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
+    ListView listView = null ;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,15 +29,27 @@ public class MainActivity extends AppCompatActivity {
 
         getWindow().setWindowAnimations(0); // acitivity 효과 없애기
 
+        final ListViewAdapter adapter = new ListViewAdapter();
 
-    }
+        listView = (ListView) findViewById(R.id.listview1);
+        listView.setAdapter(adapter);
 
-    public void onClickCoverImageSetting(View v){
+        adapter.addItem("코코 생일 ","D-25");
+        adapter.addItem("예방 접종 ","D-25");
+        adapter.addItem("태어난지 ","+1225");
 
-        Intent intent = new Intent(Intent.ACTION_GET_CONTENT); //ACTION_PIC과 차이점?
-        intent.setType("image/*"); //이미지만 보이게
-        //Intent 시작 - 갤러리앱을 열어서 원하는 이미지를 선택할 수 있다.
-        startActivityForResult(Intent.createChooser(intent, "Select Picture"), 0);
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() { // 아이템 클릭시 ( 아직 구현 안함)
+            @Override
+            public void onItemClick(AdapterView parent, View v, int position, long id) {
+                // get item
+                ListViewItem item = (ListViewItem) parent.getItemAtPosition(position) ;
+
+
+                // TODO : use item data.
+            }
+        }) ;
+
     }
 
     public void onClickHome(View v){
@@ -48,22 +65,30 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void onClickGallery(View v){
-      // Intent intent = new Intent(getApplicationContext(), GalleryActivity.class);
-     //  startActivity(intent);
+        // Intent intent = new Intent(getApplicationContext(), GalleryActivity.class);
+        //  startActivity(intent);
 
     }
 
     public void onClickCommunity(View v){
-         Intent intent = new Intent(getApplicationContext(), Community.class);
-          startActivity(intent);
+        Intent intent = new Intent(getApplicationContext(), Community.class);
+        startActivity(intent);
 
     }
 
     public void onClickSetting(View v){
-       // Intent intent = new Intent(MainActivity.this, MainActivity.class);
-       // startActivity(intent);
-       // overridePendingTransition(0, 0);
+        // Intent intent = new Intent(MainActivity.this, MainActivity.class);
+        // startActivity(intent);
+        // overridePendingTransition(0, 0);
 
+    }
+
+    public void onClickCoverImageSetting(View v){
+
+        Intent intent = new Intent(Intent.ACTION_GET_CONTENT); //ACTION_PIC과 차이점?
+        intent.setType("image/*"); //이미지만 보이게
+        //Intent 시작 - 갤러리앱을 열어서 원하는 이미지를 선택할 수 있다.
+        startActivityForResult(Intent.createChooser(intent, "Select Picture"), 0);
     }
 
 
@@ -80,8 +105,8 @@ public class MainActivity extends AppCompatActivity {
                 //이미지가 한계이상(?) 크면 불러 오지 못하므로 사이즈를 줄여 준다.
                 int nh = (int) (bitmap.getHeight() * (1024.0 / bitmap.getWidth()));
                 Bitmap scaled = Bitmap.createScaledBitmap(bitmap, 1024, nh, true);
-                RelativeLayout relativeLayout = (RelativeLayout) findViewById(R.id.cover); //커버 사진 추가하기 위함
-                relativeLayout.setBackground(new BitmapDrawable(scaled));
+                ImageView imageView = (ImageView) findViewById(R.id.cover); //커버 사진 추가하기 위함
+                imageView.setBackground(new BitmapDrawable(scaled));
             }
 
         } catch (Exception e) {

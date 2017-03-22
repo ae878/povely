@@ -4,9 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.mimi.povely.MainActivity"
-    android:id="@+id/cover"
-    android:background="#fff">
+    tools:context="com.example.mimi.povely.MainActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/cover"
+        android:src="@drawable/coco"
+        android:scaleType="centerCrop" />
 
     <TextView
         android:id="@+id/top_bar"
@@ -20,11 +25,11 @@
         android:textSize="27dp"
         android:background="#fff"/>
     <View
+        android:id="@+id/top_bar_divider"
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="#ffcccccc"
-        android:layout_below="@id/top_bar">
-    </View>
+        android:layout_below="@id/top_bar"/>
 
     <Button
         android:layout_width="wrap_content"
@@ -91,12 +96,21 @@
             android:textColor="#555"
             android:onClick="onClickSetting"/>
     </LinearLayout>
-
     <View
+        android:id="@+id/bottom_bar_divider"
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="#ffcccccc"
         android:layout_above="@id/bottom_bar">
     </View>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/listview1"
+        android:textFilterEnabled="true"
+        android:layout_below="@id/top_bar_divider"
+        android:layout_above="@id/bottom_bar_divider">
+    </ListView>
 
 </RelativeLayout>

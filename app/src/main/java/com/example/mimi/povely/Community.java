@@ -6,7 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 /**
- * Created by ae878 on 2017-03-22.
+ * Created by mimi on 2017-03-22.
  */
 
 public class Community extends AppCompatActivity {
