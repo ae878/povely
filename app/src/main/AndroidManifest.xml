@@ -18,6 +18,8 @@
         </activity>
         <activity android:name=".DiaryList"/>
         <activity android:name=".Diarynew"/>
+
+        <activity android:name=".Community"/>
     </application>
 
 </manifest>

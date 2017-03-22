@@ -18,7 +18,10 @@ public class DiaryList extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.diary_list);
 
+        getWindow().setWindowAnimations(0);// activity 전환 효과 없애기
+
         Button to_diary_new = (Button)findViewById(R.id.to_diary_new);
+
 
         to_diary_new.setOnClickListener(new View.OnClickListener() {
             @Override
