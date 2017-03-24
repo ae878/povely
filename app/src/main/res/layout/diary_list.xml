@@ -39,7 +39,8 @@
             android:layout_weight="1"
             android:background="#fff"
             android:text="홈"
-            android:textColor="#555"/>
+            android:textColor="#555"
+            android:onClick="go_home"/>
 
         <Button
             android:id="@+id/to_diary_in_diary_list"
@@ -57,7 +58,8 @@
             android:layout_weight="1"
             android:background="#fff"
             android:text="갤러리"
-            android:textColor="#555"/>
+            android:textColor="#555"
+            android:onClick="go_gallery"/>
 
         <Button
             android:id="@+id/to_community_in_diary_list"
@@ -66,7 +68,8 @@
             android:layout_weight="1"
             android:background="#fff"
             android:text="커뮤니티"
-            android:textColor="#555"/>
+            android:textColor="#555"
+            android:onClick="go_community"/>
 
 
         <Button
@@ -76,7 +79,8 @@
             android:layout_weight="1"
             android:background="#fff"
             android:text="설정"
-            android:textColor="#555"/>
+            android:textColor="#555"
+            android:onClick="go_settings"/>
     </LinearLayout>
     <View
         android:id="@+id/bottom_bar_divider"

@@ -31,4 +31,22 @@ public class DiaryList extends AppCompatActivity {
             }
         });
     }
+    public void go_home(View view) {
+        finish();
+    }
+    public void go_community(View view) {
+        Intent intent = new Intent(getApplicationContext(), Community.class);
+        startActivity(intent);
+        finish();
+    } /*
+    public void go_settings(View view) {
+        Intent intent = new Intent(getApplicationContext(), Settings.class);
+        startActivity(intent);
+        finish();
+    }
+    public void go_gallery(View view) {
+        Intent intent = new Intent(getApplicationContext(), Gallery.class);
+        startActivity(intent);
+        finish();
+    } */
 }
