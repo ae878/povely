@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.example.jsy.povely.MainActivity"
+    android:background="@drawable/dog_wallpaper_blurred"
+    >
+
+    <TextView
+        android:id="@+id/main_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text = "Povely"
+        android:textSize="70dp"
+        android:textColor="#fff"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="76dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:id="@+id/id_password"
+        android:layout_below="@+id/main_title"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="28dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="101dp">
+
+        <TextView
+            android:id="@+id/id_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="아이디:"
+            android:textColor="#fff"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            android:layout_alignParentTop="true"
+            android:layout_alignRight="@+id/password_text"
+            android:layout_alignEnd="@+id/password_text" />
+
+        <TextView
+            android:id="@+id/password_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="비밀번호:"
+            android:textColor="#fff"
+            android:textSize="23dp"
+            android:textStyle="bold"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <EditText
+            android:id="@+id/id_input"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="7"
+            android:textSize="25dp"
+            android:inputType="text"
+            android:layout_marginLeft="14dp"
+            android:layout_marginStart="14dp"
+            android:layout_alignBottom="@+id/id_text"
+            android:layout_toRightOf="@+id/id_text"
+            android:layout_toEndOf="@+id/id_text" />
+
+        <EditText
+            android:id="@+id/password_input"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="7"
+            android:textSize="25dp"
+            android:inputType="textPassword"
+            android:layout_below="@+id/id_input"
+            android:layout_alignLeft="@+id/id_input"
+            android:layout_alignStart="@+id/id_input" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="32dp"
+        android:layout_below="@+id/id_password"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <Button
+            android:id="@+id/login_button"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="로그인"
+            android:textSize="15dp"
+            android:textColor="#FF4081"
+            android:background="#fff"
+            android:onClick="onClickLogin"
+             />
+
+        <Button
+            android:id="@+id/new_Button"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:background="#fff"
+            android:text="회원가입"
+            android:textColor="#FF4081"
+            android:textSize="15dp"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/login_button"
+            android:layout_toEndOf="@+id/login_button"
+            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"
+            android:onClick="onClickNewMember"/>
+    </RelativeLayout>
+
+</RelativeLayout>
