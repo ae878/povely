@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.mimi.povely.MainActivity"
+    android:background="#fff">
+
+    <TextView
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:gravity="center_horizontal"
+        android:text="Povely"
+        android:textColor="#333"
+        android:textSize="27dp"
+        android:background="#fff"
+        />
+
+
+    <View
+        android:id="@+id/top_bar_divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#ffcccccc"
+        android:layout_below="@id/top_bar">
+    </View>
+
+    <LinearLayout
+        android:id="@+id/commuinty_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/top_bar_divider">
+
+        <Button
+            android:id="@+id/bbom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#fff"
+            android:text="누렁이뽐내기"
+            android:textColor="#555"
+            android:onClick="onClickBbom"/>
+
+        <Button
+            android:id="@+id/board"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#fff"
+            android:text="게시판"
+            android:textColor="#555"
+            android:onClick="onClickBoard"/>
+
+        <Button
+            android:id="@+id/market"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#fff"
+            android:text="장터"
+            android:textColor="#555"
+            android:onClick="onClickMarket"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#ffcccccc"
+        android:layout_below="@id/commuinty_bar">
+    </View>
+
+    <LinearLayout
+        android:id="@+id/bottom_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:id="@+id/to_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#fff"
+            android:text="홈"
+            android:textColor="#555"
+            android:onClick="onClickHome"/>
+
+        <Button
+            android:id="@+id/to_diary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#fff"
+            android:text="일기"
+            android:textColor="#555"
+            android:onClick="onClickDiary"/>
+
+        <Button
+            android:id="@+id/to_gallery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#fff"
+            android:text="갤러리"
+            android:textColor="#555"
+            android:onClick="onClickGallery"/>
+
+
+        <Button
+            android:id="@+id/to_community"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#fff"
+            android:text="커뮤니티"
+            android:textColor="#555"
+            android:onClick="onClickCommunity"/>
+
+        <Button
+            android:id="@+id/to_settings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#fff"
+            android:text="설정"
+            android:textColor="#555"
+            android:onClick="onClickSetting"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#ffcccccc"
+        android:layout_above="@id/bottom_bar">
+    </View>
+
+</RelativeLayout>

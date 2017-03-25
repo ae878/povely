@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.mimi.povely.MainActivity"
+    android:background="#fff">
+
+
+    <TextView
+        android:id="@+id/top_bar_in_diary_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:gravity="center_horizontal"
+        android:text="Povely"
+        android:textColor="#333"
+        android:textSize="27dp"
+        android:background="#fff"/>
+    <View
+        android:id="@+id/top_bar_divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#ffcccccc"
+        android:layout_below="@id/top_bar_in_diary_list">
+    </View>
+    <LinearLayout
+        android:id="@+id/bottom_bar_in_diary_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:id="@+id/to_home_in_diary_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#fff"
+            android:text="홈"
+            android:textColor="#555"
+            android:onClick="go_home"/>
+
+        <Button
+            android:id="@+id/to_diary_in_diary_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#fff"
+            android:text="일기"
+            android:textColor="#555"/>
+
+        <Button
+            android:id="@+id/to_gallery_in_diary_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#fff"
+            android:text="갤러리"
+            android:textColor="#555"
+            android:onClick="go_gallery"/>
+
+        <Button
+            android:id="@+id/to_community_in_diary_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#fff"
+            android:text="커뮤니티"
+            android:textColor="#555"
+            android:onClick="go_community"/>
+
+
+        <Button
+            android:id="@+id/to_settings_in_diary_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#fff"
+            android:text="설정"
+            android:textColor="#555"
+            android:onClick="go_settings"/>
+    </LinearLayout>
+    <View
+        android:id="@+id/bottom_bar_divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#ffcccccc"
+        android:layout_above="@id/bottom_bar_in_diary_list">
+    </View>
+    <Button
+        android:id="@+id/to_diary_new"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/round_btn"
+        android:text="+"
+        android:textSize="40dp"
+        android:layout_alignParentRight="true"
+        android:layout_above="@id/bottom_bar_in_diary_list"
+        android:layout_marginBottom="9dp"
+        android:layout_marginRight="5dp"/>
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:dividerHeight="1dp"
+        android:divider="#ddd"
+        android:layout_below="@id/top_bar_divider"
+        android:layout_above="@id/bottom_bar_divider">
+    </ListView>
+</RelativeLayout>
