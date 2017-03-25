@@ -1,4 +1,4 @@
-package com.example.jsy.povely;
+package com.example.mimi.povely;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -26,6 +26,7 @@ public class NewMember extends AppCompatActivity {
         new_member.setOnClickListener(new Button.OnClickListener(){
             public void onClick(View v){
                 Intent intent = new Intent(getApplicationContext(), com.example.mimi.povely.MainActivity.class);
+                startActivity(intent);
             }
         });
     }
