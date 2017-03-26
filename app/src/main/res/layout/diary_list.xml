@@ -41,16 +41,12 @@
             android:text="홈"
             android:textColor="#555"
             android:onClick="go_home"/>
-
         <Button
-            android:id="@+id/to_diary_in_diary_list"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:id="@+id/to_diary_new"
             android:layout_weight="1"
-            android:background="#fff"
-            android:text="일기"
-            android:textColor="#555"/>
-
+            android:layout_height="wrap_content"
+            android:layout_width="30dp"
+            android:layout_centerInParent="true"/>
         <Button
             android:id="@+id/to_gallery_in_diary_list"
             android:layout_width="wrap_content"
@@ -71,7 +67,6 @@
             android:textColor="#555"
             android:onClick="go_community"/>
 
-
         <Button
             android:id="@+id/to_settings_in_diary_list"
             android:layout_width="wrap_content"
@@ -89,17 +84,6 @@
         android:background="#ffcccccc"
         android:layout_above="@id/bottom_bar_in_diary_list">
     </View>
-    <Button
-        android:id="@+id/to_diary_new"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/round_btn"
-        android:text="+"
-        android:textSize="40dp"
-        android:layout_alignParentRight="true"
-        android:layout_above="@id/bottom_bar_in_diary_list"
-        android:layout_marginBottom="9dp"
-        android:layout_marginRight="5dp"/>
     <ListView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

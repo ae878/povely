@@ -4,6 +4,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.graphics.Bitmap;
+import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
@@ -14,6 +15,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.io.File;
 import java.text.SimpleDateFormat;
@@ -29,9 +31,11 @@ public class Diarynew extends AppCompatActivity {
     private TextView date_view;
     private Uri mImageCaptureUri;
     private String absolutePath;
-
-
-    SimpleDateFormat sdfNow = new SimpleDateFormat("yyyy/MM/dd HH:MM:SS", Locale.KOREA);
+    private TextView top_bar_text;
+    private EditText diary_title;
+    private TextView make_date;
+    private EditText diary_content;
+    SimpleDateFormat sdfNow = new SimpleDateFormat("yyyy. MM. dd.   ", Locale.KOREA);
     Date date = new Date();
     String formatDate = sdfNow.format(date);
 
@@ -51,6 +55,14 @@ public class Diarynew extends AppCompatActivity {
         iv_UsertPhoto = (ImageView)findViewById(R.id.photo);
         date_view = (TextView)findViewById(R.id.make_date);
         date_view.setText(formatDate);
+        top_bar_text = (TextView)findViewById(R.id.top_bar_text);
+        top_bar_text.setTypeface(Typeface.createFromAsset(getAssets(), "fonts/NanumBarunpenR.ttf"));
+        diary_title = (EditText)findViewById(R.id.diary_title);
+        diary_title.setTypeface(Typeface.createFromAsset(getAssets(), "fonts/NanumBarunpenR.ttf"));
+        diary_content = (EditText)findViewById(R.id.diary_content);
+        diary_content.setTypeface(Typeface.createFromAsset(getAssets(), "fonts/NanumBarunpenR.ttf"));
+        make_date = (TextView)findViewById(R.id.make_date);
+        make_date.setTypeface(Typeface.createFromAsset(getAssets(), "fonts/NanumBarunpenR.ttf"));
 
         findViewById(R.id.make_new_diary).setOnClickListener(new View.OnClickListener() {
             @Override
@@ -66,6 +78,9 @@ public class Diarynew extends AppCompatActivity {
         super.onConfigurationChanged(newConfig);
     }
 
+    public void Camera_Video_Upload(View v) {
+        Toast.makeText(this, "카메라/비디오 눌림", Toast.LENGTH_LONG).show();
+    }
     public void onClick(View v) {
         DialogInterface.OnClickListener cameraListener = new DialogInterface.OnClickListener() {
             @Override
