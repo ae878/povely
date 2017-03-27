@@ -16,11 +16,7 @@
     <TextView
         android:id="@+id/top_bar"
         android:layout_width="match_parent"
-<<<<<<< HEAD
         android:layout_height="wrap_content"
-=======
-        android:layout_height="55dip"
->>>>>>> 185c1f0dc92b303c3bb5e17b8316536a6cb79645
         android:paddingTop="10dp"
         android:paddingBottom="10dp"
         android:gravity="center_horizontal"
