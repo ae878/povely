@@ -2,7 +2,6 @@ package com.example.mimi.povely;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageButton;
 
@@ -11,7 +10,7 @@ import android.widget.ImageButton;
  * 일기 눌렀을때, 맨 처음 나오게 되는 작성한 일기들 리스트.
  */
 
-public class DiaryList extends AppCompatActivity {
+public class DiaryList extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,7 +20,6 @@ public class DiaryList extends AppCompatActivity {
         getWindow().setWindowAnimations(0);// activity 전환 효과 없애기
 
         ImageButton to_diary_new = (ImageButton)findViewById(R.id.to_diary_new);
-
 
         to_diary_new.setOnClickListener(new View.OnClickListener() {
             @Override

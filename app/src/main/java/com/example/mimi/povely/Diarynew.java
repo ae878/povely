@@ -4,13 +4,11 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.graphics.Bitmap;
-import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
 import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -26,7 +24,7 @@ import java.util.Locale;
  * Created by Koo on 2017-03-14.
  */
 
-public class Diarynew extends AppCompatActivity {
+public class Diarynew extends BaseActivity {
     private ImageView iv_UsertPhoto;
     private TextView date_view;
     private Uri mImageCaptureUri;
@@ -52,17 +50,10 @@ public class Diarynew extends AppCompatActivity {
                 finish();
             }
         });
+        getWindow().setWindowAnimations(0); // acitivity 효과 없애기
         iv_UsertPhoto = (ImageView)findViewById(R.id.photo);
         date_view = (TextView)findViewById(R.id.make_date);
         date_view.setText(formatDate);
-        top_bar_text = (TextView)findViewById(R.id.top_bar_text);
-        top_bar_text.setTypeface(Typeface.createFromAsset(getAssets(), "fonts/NanumBarunpenR.ttf"));
-        diary_title = (EditText)findViewById(R.id.diary_title);
-        diary_title.setTypeface(Typeface.createFromAsset(getAssets(), "fonts/NanumBarunpenR.ttf"));
-        diary_content = (EditText)findViewById(R.id.diary_content);
-        diary_content.setTypeface(Typeface.createFromAsset(getAssets(), "fonts/NanumBarunpenR.ttf"));
-        make_date = (TextView)findViewById(R.id.make_date);
-        make_date.setTypeface(Typeface.createFromAsset(getAssets(), "fonts/NanumBarunpenR.ttf"));
 
         findViewById(R.id.make_new_diary).setOnClickListener(new View.OnClickListener() {
             @Override

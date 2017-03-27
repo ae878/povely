@@ -2,14 +2,13 @@ package com.example.mimi.povely;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 /**
  * Created by mimi on 2017-03-22.
  */
 
-public class Community extends AppCompatActivity {
+public class Community extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
