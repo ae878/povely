@@ -52,8 +52,9 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public void onClickHome(View v){
-
+    public void onClickWidgetPlus(View v){
+        Intent intent = new Intent(getApplicationContext(), WidgetNew.class);
+        startActivity(intent);
 
     }
 

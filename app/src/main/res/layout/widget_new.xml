@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="#FF4081"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:gravity="center_horizontal"
+        android:text="위젯 추가"
+        android:textColor="#333"
+        android:textSize="27dp"
+        android:background="#fff"/>
+    <View
+        android:id="@+id/top_bar_divider"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#ffcccccc"
+        android:layout_below="@id/top_bar">
+    </View>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/top_bar_divider"
+       >
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="24dp"
+            android:background="#FFFFFF"
+            android:textColorHint="#000000"
+            android:layout_marginTop="10dp"
+            android:textSize="20dp"
+            android:hint="제목"/>
+
+
+    </LinearLayout>
+    <View
+        android:id="@+id/bottom_bar_divider"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#ffcccccc"
+        android:layout_above="@id/bottom_bar_in_diary_list">
+    </View>
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:dividerHeight="1dp"
+        android:divider="#ddd"
+        android:layout_below="@id/top_bar_divider"
+        android:layout_above="@id/bottom_bar_divider">
+    </ListView>
+</RelativeLayout>

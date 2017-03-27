@@ -26,6 +26,7 @@
             android:configChanges="orientation|screenSize"/>
 
         <activity android:name=".Community"/>
+        <activity android:name=".WidgetNew"></activity>
 
         <activity android:name=".NewMember"></activity>
     </application>
