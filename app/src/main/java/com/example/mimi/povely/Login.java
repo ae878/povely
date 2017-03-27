@@ -14,6 +14,8 @@ public class Login extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.sign_in);
+
+        getWindow().setWindowAnimations(0);
     }
     public void onClickNewMember(View v){
         Intent intent = new Intent(getApplicationContext(),NewMember.class);
