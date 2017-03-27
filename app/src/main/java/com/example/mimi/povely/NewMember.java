@@ -17,6 +17,7 @@ public class NewMember extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.new_member);
+        getWindow().setWindowAnimations(0);
 
         new_member = (Button)findViewById(R.id.new_member_button);
 
