@@ -5,50 +5,40 @@ import android.os.Bundle;
 import android.view.View;
 
 /**
- * Created by mimi on 2017-03-22.
+ * Created by Koo on 2017-03-31.
  */
 
-public class Community extends BaseActivity {
-
+public class Gallery extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_community);
-
-        getWindow().setWindowAnimations(0); // acitivity 효과 없애기
+        setContentView(R.layout.gallery);
+        getWindow().setWindowAnimations(0);// activity 전환 효과 없애기
 
     }
-
-
-    public void onClickHome(View v) {
+    public void go_home(View v) {
         Intent intent = new Intent(getApplicationContext(), MainActivity.class);
         startActivity(intent);
         finish();
     }
-
-    public void onClickDiary(View v) {
+    public void go_diary(View v) {
         Intent intent = new Intent(getApplicationContext(), DiaryList.class);
         startActivity(intent);
         finish();
     }
-
-
-    public void onClickGallery(View v) {
+    public void go_gallery(View v) {
         Intent intent = new Intent(getApplicationContext(), Gallery.class);
         startActivity(intent);
         finish();
     }
-
-    public void onClickCommunity(View v) {
+    public void go_community(View v) {
         Intent intent = new Intent(getApplicationContext(), Community.class);
         startActivity(intent);
         finish();
     }
-
-    public void onClickSetting(View v) {
-        // Intent intent = new Intent(MainActivity.this, MainActivity.class);
-        // startActivity(intent);
-        // overridePendingTransition(0, 0);
-
-    }
+    /*public void go_settings(View v) {
+        finish();
+        Intent intent = new Intent(getApplicationContext(), Community.class);
+        startActivity(intent);
+    }*/
 }

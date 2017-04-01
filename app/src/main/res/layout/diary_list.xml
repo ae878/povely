@@ -6,8 +6,6 @@
     android:layout_height="match_parent"
     tools:context="com.example.mimi.povely.MainActivity"
     android:background="#fff">
-
-
     <TextView
         android:id="@+id/top_bar_in_diary_list"
         android:layout_width="match_parent"
@@ -26,10 +24,22 @@
         android:background="#ffcccccc"
         android:layout_below="@id/top_bar_in_diary_list">
     </View>
+    <TextView
+        android:id="@+id/which_diary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/top_bar_divider"
+        android:layout_centerHorizontal="true"
+        android:onClick="slide_menu"
+        android:text="기본 일기장 >"
+        android:textColor="#000"
+        android:textSize="20dp" />
     <LinearLayout
         android:id="@+id/bottom_bar_in_diary_list"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:paddingTop="5dp"
+        android:paddingBottom="3dp"
         android:layout_alignParentBottom="true">
         <RelativeLayout
             android:layout_width="0dp"
@@ -150,4 +160,4 @@
         android:layout_below="@id/top_bar_divider"
         android:layout_above="@id/bottom_bar_divider">
     </ListView>
-    </RelativeLayout>
+</RelativeLayout>

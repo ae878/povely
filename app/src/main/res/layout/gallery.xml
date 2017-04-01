@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.mimi.povely.MainActivity"
     android:background="#fff">
     <TextView
-        android:id="@+id/top_bar"
+        android:id="@+id/top_bar_in_gallery"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingTop="10dp"
@@ -20,169 +17,129 @@
     <View
         android:id="@+id/top_bar_divider"
         android:layout_width="match_parent"
-        android:layout_height="1dp"
+        android:layout_height="0.5dp"
         android:background="#ffcccccc"
-        android:layout_below="@id/top_bar"/>
+        android:layout_below="@id/top_bar_in_gallery">
+    </View>
     <LinearLayout
-        android:id="@+id/commuinty_bar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/top_bar_divider">
-        <Button
-            android:id="@+id/bbom"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="#fff"
-            android:text="누렁이뽐내기"
-            android:textColor="#555"
-            android:onClick="onClickBbom"/>
-        <Button
-            android:id="@+id/board"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="#fff"
-            android:text="게시판"
-            android:textColor="#555"
-            android:onClick="onClickBoard"/>
-        <Button
-            android:id="@+id/market"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="#fff"
-            android:text="장터"
-            android:textColor="#555"
-            android:onClick="onClickMarket"/>
-    </LinearLayout>
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="#ffcccccc"
-        android:layout_below="@id/commuinty_bar"/>
-    <LinearLayout
-        android:id="@+id/bottom_bar"
+        android:id="@+id/bottom_bar_in_gallery"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingTop="5dp"
         android:paddingBottom="3dp"
-        android:background="#FFFFFF"
         android:layout_alignParentBottom="true">
         <RelativeLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:onClick="onClickHome">
+            android:layout_weight="1">
             <ImageButton
-                android:id="@+id/to_home"
+                android:id="@+id/to_home_in_gallery"
                 android:layout_width="33dp"
                 android:layout_height="33dp"
                 android:layout_centerHorizontal="true"
-                android:onClick="onClickHome"
-                android:background="@drawable/home_button"/>
+                android:background="@drawable/home_button"
+                android:onClick="go_home"/>
             <TextView
                 android:layout_below="@id/to_home"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
-                android:onClick="onClickHome"
                 android:text="홈"
                 android:textSize="10dp"
-                android:textColor="#ff888888"/>
+                android:textColor="#ff888888"
+                android:onClick="go_home"/>
         </RelativeLayout>
         <RelativeLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:onClick="onClickDiary">
+            android:layout_weight="1">
             <ImageButton
-                android:id="@+id/to_diary"
+                android:id="@+id/to_diary_new_in_gallery"
                 android:layout_width="33dp"
                 android:layout_height="33dp"
                 android:layout_centerHorizontal="true"
-                android:onClick="onClickDiary"
-                android:background="@drawable/diary_button"/>
-            <TextView
-                android:layout_below="@id/to_diary"
+                android:background="@drawable/diary_button"
+                android:onClick="go_diary"/>
+           <TextView
+                android:layout_below="@id/to_diary_new_in_gallery"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:text="일기"
                 android:textSize="10dp"
-                android:onClick="onClickDiary"
-                android:textColor="#ff888888"/>
+                android:textColor="#ff888888"
+               android:onClick="go_diary"/>
         </RelativeLayout>
         <RelativeLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:onClick="onClickGallery">
+            android:layout_weight="1">
             <ImageButton
-                android:id="@+id/to_gallery"
+                android:id="@+id/to_gallery_in_gallery"
                 android:layout_width="33dp"
                 android:layout_height="33dp"
                 android:layout_centerHorizontal="true"
-                android:onClick="onClickGallery"
-                android:background="@drawable/gallery_button"/>
+                android:background="@drawable/gallery_button"
+                android:onClick="go_gallery"/>
             <TextView
-                android:layout_below="@id/to_gallery"
+                android:layout_below="@id/to_gallery_in_gallery"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:onClick="onClickGallery"
                 android:layout_centerHorizontal="true"
                 android:text="갤러리"
                 android:textSize="10dp"
-                android:textColor="#ff888888"/>
+                android:textColor="#ff888888"
+                android:onClick="go_gallery"/>
         </RelativeLayout>
         <RelativeLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:onClick="onClickCommunityPlus">
+            android:layout_weight="1">
             <ImageButton
-                android:id="@+id/to_community"
+                android:id="@+id/to_community_in_gallery"
                 android:layout_width="33dp"
                 android:layout_height="33dp"
                 android:layout_centerHorizontal="true"
-                android:background="@drawable/plus"
-                android:onClick="onClickCommunityPlus"/>
+                android:background="@drawable/community_button"
+                android:onClick="go_community"/>
             <TextView
-                android:layout_below="@id/to_community"
+                android:layout_below="@id/to_community_in_gallery"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
-                android:text="글쓰기"
+                android:text="커뮤니티"
                 android:textSize="10dp"
                 android:textColor="#ff888888"
-                android:onClick="onClickCommunityPlus"/>
+                android:onClick="go_community"/>
         </RelativeLayout>
         <RelativeLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:onClick="onClickSetting">
+            android:layout_weight="1">
             <ImageButton
-                android:id="@+id/to_settings"
+                android:id="@+id/to_settings_in_gallery"
                 android:layout_width="33dp"
                 android:layout_height="33dp"
                 android:layout_centerHorizontal="true"
-                android:onClick="onClickSetting"
-                android:background="@drawable/settings_button"/>
+                android:background="@drawable/settings_button"
+                android:onClick="go_settings"/>
             <TextView
-                android:layout_below="@id/to_settings"
+                android:layout_below="@id/to_settings_in_gallery"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:text="설정"
                 android:textSize="10dp"
-                android:onClick="onClickSetting"
-                android:textColor="#ff888888"/>
+                android:textColor="#ff888888"
+                android:onClick="go_settings"/>
         </RelativeLayout>
     </LinearLayout>
     <View
+        android:id="@+id/bottom_bar_divider"
         android:layout_width="match_parent"
         android:layout_height="0.5dp"
         android:background="#ffcccccc"
-        android:layout_above="@id/bottom_bar"/>
+        android:layout_above="@id/bottom_bar_in_diary_list">
+    </View>
+
 </RelativeLayout>

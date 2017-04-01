@@ -17,18 +17,16 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
-        <activity android:name=".MainActivity">
-        </activity>
+        <activity android:name=".MainActivity"/>
         <activity android:name=".DiaryList"/>
         <activity android:name=".Diarynew"
             android:configChanges="orientation|screenSize"/>
-
         <activity android:name=".Community"/>
-        <activity android:name=".WidgetNew"></activity>
+        <activity android:name=".WidgetNew"/>
         <activity android:name=".BaseActivity"/>
-        <activity android:name=".NewMember"></activity>
+        <activity android:name=".NewMember"/>
+        <activity android:name=".Gallery"/>
 
     </application>
 

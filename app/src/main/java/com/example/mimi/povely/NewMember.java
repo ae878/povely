@@ -24,6 +24,7 @@ public class NewMember extends BaseActivity {
         new_member.setOnClickListener(new Button.OnClickListener(){
             public void onClick(View v){
                 Intent intent = new Intent(getApplicationContext(), com.example.mimi.povely.MainActivity.class);
+                finish();
                 startActivity(intent);
             }
         });

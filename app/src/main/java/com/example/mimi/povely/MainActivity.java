@@ -48,37 +48,34 @@ public class MainActivity extends BaseActivity {
     public void onClickWidgetPlus(View v){
         Intent intent = new Intent(getApplicationContext(), WidgetNew.class);
         startActivity(intent);
-
     }
 
     public void onClickDiary(View v){
         Intent intent = new Intent(getApplicationContext(), DiaryList.class);
         startActivity(intent);
-
+        finish();
     }
 
 
     public void onClickGallery(View v){
-        // Intent intent = new Intent(getApplicationContext(), GalleryActivity.class);
-        //  startActivity(intent);
-
+        Intent intent = new Intent(getApplicationContext(), Gallery.class);
+        startActivity(intent);
+        finish();
     }
 
     public void onClickCommunity(View v){
         Intent intent = new Intent(getApplicationContext(), Community.class);
         startActivity(intent);
-
+        finish();
     }
 
     public void onClickSetting(View v){
         // Intent intent = new Intent(MainActivity.this, MainActivity.class);
         // startActivity(intent);
         // overridePendingTransition(0, 0);
-
     }
 
     public void onClickCoverImageSetting(View v){
-
         Intent intent = new Intent(Intent.ACTION_GET_CONTENT); //ACTION_PIC과 차이점?
         intent.setType("image/*"); //이미지만 보이게
         //Intent 시작 - 갤러리앱을 열어서 원하는 이미지를 선택할 수 있다.

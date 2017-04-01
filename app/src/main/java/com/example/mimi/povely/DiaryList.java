@@ -20,7 +20,6 @@ public class DiaryList extends BaseActivity {
         getWindow().setWindowAnimations(0);// activity 전환 효과 없애기
 
         ImageButton to_diary_new = (ImageButton)findViewById(R.id.to_diary_new);
-
         to_diary_new.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -30,15 +29,12 @@ public class DiaryList extends BaseActivity {
         });
     }
     public void go_home(View view) {
+        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+        startActivity(intent);
         finish();
     }
     public void go_community(View view) {
         Intent intent = new Intent(getApplicationContext(), Community.class);
-        startActivity(intent);
-        finish();
-    } /*
-    public void go_settings(View view) {
-        Intent intent = new Intent(getApplicationContext(), Settings.class);
         startActivity(intent);
         finish();
     }
@@ -46,5 +42,13 @@ public class DiaryList extends BaseActivity {
         Intent intent = new Intent(getApplicationContext(), Gallery.class);
         startActivity(intent);
         finish();
-    } */
+    }/*
+    public void go_settings(View view) {
+        Intent intent = new Intent(getApplicationContext(), Settings.class);
+        startActivity(intent);
+        finish();
+    }*/
+    public void slide_menu(View view) {
+        finish();
+    }
 }
