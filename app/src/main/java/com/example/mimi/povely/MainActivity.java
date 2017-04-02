@@ -3,23 +3,16 @@ package com.example.mimi.povely;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
-import android.graphics.drawable.Drawable;
-import android.media.Image;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
-import android.support.v4.content.ContextCompat;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.ListView;
-import android.widget.RelativeLayout;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseActivity {
 
     ListView listView = null ;
     @Override
@@ -55,37 +48,34 @@ public class MainActivity extends AppCompatActivity {
     public void onClickWidgetPlus(View v){
         Intent intent = new Intent(getApplicationContext(), WidgetNew.class);
         startActivity(intent);
-
     }
 
     public void onClickDiary(View v){
         Intent intent = new Intent(getApplicationContext(), DiaryList.class);
         startActivity(intent);
-
+        finish();
     }
 
 
     public void onClickGallery(View v){
-        // Intent intent = new Intent(getApplicationContext(), GalleryActivity.class);
-        //  startActivity(intent);
-
+        Intent intent = new Intent(getApplicationContext(), Gallery.class);
+        startActivity(intent);
+        finish();
     }
 
     public void onClickCommunity(View v){
         Intent intent = new Intent(getApplicationContext(), Community.class);
         startActivity(intent);
-
+        finish();
     }
 
     public void onClickSetting(View v){
         // Intent intent = new Intent(MainActivity.this, MainActivity.class);
         // startActivity(intent);
         // overridePendingTransition(0, 0);
-
     }
 
     public void onClickCoverImageSetting(View v){
-
         Intent intent = new Intent(Intent.ACTION_GET_CONTENT); //ACTION_PIC과 차이점?
         intent.setType("image/*"); //이미지만 보이게
         //Intent 시작 - 갤러리앱을 열어서 원하는 이미지를 선택할 수 있다.

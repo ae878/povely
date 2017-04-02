@@ -2,17 +2,14 @@ package com.example.mimi.povely;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
-
-import com.example.mimi.povely.*;
 
 /**
  * Created by JSY on 2017-03-25.
  */
 
-public class NewMember extends AppCompatActivity {
+public class NewMember extends BaseActivity {
 
     Button new_member;
 
@@ -27,6 +24,7 @@ public class NewMember extends AppCompatActivity {
         new_member.setOnClickListener(new Button.OnClickListener(){
             public void onClick(View v){
                 Intent intent = new Intent(getApplicationContext(), com.example.mimi.povely.MainActivity.class);
+                finish();
                 startActivity(intent);
             }
         });
