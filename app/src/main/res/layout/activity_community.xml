@@ -6,5 +6,268 @@
     android:layout_height="match_parent"
     tools:context="com.example.mimi.povely.MainActivity"
     android:background="#fff">
+<<<<<<< HEAD
 
     </RelativeLayout>
+=======
+
+    <TextView
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:gravity="center_horizontal"
+        android:text="Povely"
+        android:textColor="#333"
+        android:textSize="27dp"
+        android:background="#fff"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <View
+        android:id="@+id/top_bar_divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#ffcccccc"
+        android:layout_below="@id/top_bar"/>
+
+
+    <LinearLayout
+        android:id="@+id/bottom_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="5dp"
+        android:paddingBottom="3dp"
+        android:background="#FFFFFF"
+        android:layout_alignParentBottom="true">
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="onClickHome">
+            <ImageButton
+                android:id="@+id/to_home"
+                android:layout_width="33dp"
+                android:layout_height="33dp"
+                android:layout_centerHorizontal="true"
+                android:onClick="onClickHome"
+                android:background="@drawable/home_button"/>
+            <TextView
+                android:layout_below="@id/to_home"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:onClick="onClickHome"
+                android:text="홈"
+                android:textSize="10dp"
+                android:textColor="#ff888888"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="onClickDiary">
+            <ImageButton
+                android:id="@+id/to_diary"
+                android:layout_width="33dp"
+                android:layout_height="33dp"
+                android:layout_centerHorizontal="true"
+                android:onClick="onClickDiary"
+                android:background="@drawable/diary_button"/>
+            <TextView
+                android:layout_below="@id/to_diary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="일기"
+                android:textSize="10dp"
+                android:onClick="onClickDiary"
+                android:textColor="#ff888888"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="onClickGallery">
+            <ImageButton
+                android:id="@+id/to_gallery"
+                android:layout_width="33dp"
+                android:layout_height="33dp"
+                android:layout_centerHorizontal="true"
+                android:onClick="onClickGallery"
+                android:background="@drawable/gallery_button"/>
+            <TextView
+                android:layout_below="@id/to_gallery"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onClickGallery"
+                android:layout_centerHorizontal="true"
+                android:text="갤러리"
+                android:textSize="10dp"
+                android:textColor="#ff888888"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="onClickCommunityPlus">
+            <ImageButton
+                android:id="@+id/to_community"
+                android:layout_width="33dp"
+                android:layout_height="33dp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/community_button"
+                android:onClick="onClickCommunity"
+                />
+            <TextView
+                android:layout_below="@id/to_community"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="커뮤니티"
+                android:textSize="10dp"
+                android:textColor="#ff888888"
+                android:onClick="onClickCommunity"
+                />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="onClickSetting">
+            <ImageButton
+                android:id="@+id/to_settings"
+                android:layout_width="33dp"
+                android:layout_height="33dp"
+                android:layout_centerHorizontal="true"
+                android:onClick="onClickSetting"
+                android:background="@drawable/settings_button"/>
+            <TextView
+                android:layout_below="@id/to_settings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="설정"
+                android:textSize="10dp"
+                android:onClick="onClickSetting"
+                android:textColor="#ff888888"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/bottom_bar_divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#ffcccccc"
+        android:layout_above="@id/bottom_bar">
+    </View>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#ffcccccc"
+        android:layout_below="@id/top_bar"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="3"
+        android:paddingTop="5dp"
+        android:paddingBottom="3dp"
+        android:background="#FFFFFF"
+        android:orientation="vertical"
+        android:layout_below="@+id/top_bar_divider"
+        android:layout_above="@id/bottom_bar_divider">
+
+        <RelativeLayout
+            android:id="@+id/market"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <View
+                android:id="@+id/divider1"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentBottom="true"
+                android:background="#ffcccccc"></View>
+
+            <ImageButton
+                android:id="@+id/to_market"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/market_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/to_market"
+                android:layout_centerHorizontal="true"
+                android:text="펫마켓"
+                android:textColor="#ff888888"
+                android:textSize="20dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/petstagram"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <View
+                android:id="@+id/divider2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentBottom="true"
+                android:background="#ffcccccc" />
+
+            <ImageButton
+                android:id="@+id/to_petstagram"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/social_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/to_petstagram"
+                android:layout_centerHorizontal="true"
+                android:text="펫스타그램"
+                android:textColor="#ff888888"
+                android:textSize="20dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/board"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <ImageButton
+                android:id="@+id/to_board"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/board_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/to_board"
+                android:layout_centerHorizontal="true"
+                android:onClick="onClickGallery"
+                android:text="게시판"
+                android:textColor="#ff888888"
+                android:textSize="20dp" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
+>>>>>>> fc2ee29505a7e37e32fb222e4be21d85008aa89f
