@@ -18,7 +18,7 @@ public class Photo_ListView extends RelativeLayout {
     public Photo_ListView(Context context, Photo_item photo) {
         super(context);
         LayoutInflater inflater = (LayoutInflater)context.getSystemService(context.LAYOUT_INFLATER_SERVICE);
-        inflater.inflate(R.layout.diary_list_item, this, true);
+        inflater.inflate(R.layout.photo_item_in_diary_new, this, true);
 
         icon = (ImageView)findViewById(R.id.photo_item);
     }

@@ -13,8 +13,11 @@ import java.util.ArrayList;
 
 public class PhotoListAdapter extends BaseAdapter {
     private Context context = null;
+
     private ArrayList<Photo_item> gData = new ArrayList<Photo_item>();
+
     public PhotoListAdapter(Context context) { this.context = context; }
+
     public void addItem(Photo_item item) { gData.add(item); }
 
     public int getCount() { return gData.size(); }

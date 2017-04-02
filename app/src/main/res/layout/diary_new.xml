@@ -149,13 +149,15 @@
                 android:layout_height="0.5dp"
                 android:background="#ffcccccc" />
         </RelativeLayout>
-        <ListView
+
+        <Gallery
             android:layout_alignParentTop="true"
             android:id="@+id/photo_list"
             android:layout_width="match_parent"
             android:layout_height="100dp"
-            android:background="#fff">
-        </ListView>
+            android:background="#fff"
+            android:spacing="20dp"/>
+
         <RelativeLayout
             android:id="@+id/bottom_content"
             android:layout_width="wrap_content"
@@ -163,9 +165,10 @@
             <LinearLayout
                 android:id="@+id/content_layout"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:orientation="vertical"
-                android:layout_marginTop="10dp">
+                android:layout_marginTop="10dp"
+                android:onClick="input_content">
                 <EditText
                     android:id="@+id/diary_content"
                     android:layout_width="match_parent"

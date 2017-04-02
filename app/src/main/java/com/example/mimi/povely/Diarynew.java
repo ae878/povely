@@ -1,6 +1,7 @@
 package com.example.mimi.povely;
 
 import android.app.DatePickerDialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.res.Configuration;
@@ -14,9 +15,9 @@ import android.support.v7.app.AlertDialog;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.DatePicker;
 import android.widget.EditText;
-import android.widget.ListView;
 import android.widget.TextView;
 
 import java.io.File;
@@ -48,7 +49,7 @@ public class Diarynew extends BaseActivity {
     static String SAMPLEIMG="ic_launcher.png";
 
     PhotoListAdapter adapter = null;
-    ListView lv = null;
+    Gallery lv = null;
 
     SimpleDateFormat sdfNow = new SimpleDateFormat("yyyy. MM. dd.   ", Locale.KOREA);
     Date date = new Date();
@@ -67,6 +68,7 @@ public class Diarynew extends BaseActivity {
 
         diary_title = (EditText)findViewById(R.id.diary_title);
         now_length = (TextView)findViewById(R.id.now_length);
+        diary_content = (EditText)findViewById(R.id.diary_content);
 
         findViewById(R.id.go_back_in_diary_new).setOnClickListener(new View.OnClickListener() {
             @Override
@@ -79,8 +81,10 @@ public class Diarynew extends BaseActivity {
         date_view.setText(formatDate);
 
         adapter = new PhotoListAdapter(this);
-        lv = (ListView)findViewById(R.id.photo_list);
-        lv.setAdapter(adapter);
+        //lv = (ListView)findViewById(R.id.photo_list);
+        //lv.setAdapter(adapter);
+        android.widget.Gallery gallery = (android.widget.Gallery)findViewById(R.id.photo_list);
+        gallery.setAdapter(adapter);
 
         diary_title.addTextChangedListener(new TextWatcher() {
             String strCur;
@@ -106,7 +110,11 @@ public class Diarynew extends BaseActivity {
     public void delete_title(View v) {
         diary_title.setText(null);
     }
-
+    public void input_content(View v) {
+        diary_content.requestFocus();
+        InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+        imm.toggleSoftInput(InputMethodManager.SHOW_FORCED, InputMethodManager.HIDE_IMPLICIT_ONLY);
+    }
     @Override
     public void onConfigurationChanged(Configuration newConfig) {
         super.onConfigurationChanged(newConfig);
