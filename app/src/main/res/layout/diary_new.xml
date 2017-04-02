@@ -150,14 +150,25 @@
                 android:background="#ffcccccc" />
         </RelativeLayout>
 
-        <Gallery
-            android:layout_alignParentTop="true"
-            android:id="@+id/photo_list"
-            android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:background="#fff"
-            android:spacing="20dp"/>
-
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#000">
+            <com.example.mimi.povely.HorizontalListView
+                android:id="@+id/photo_list"
+                android:layout_width="match_parent"
+                android:layout_height="88dp"
+                android:layout_alignParentTop="true"
+                android:background="#fff"
+                />
+            <View
+                android:layout_below="@id/photo_list"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#ffcccccc" />
+        </LinearLayout>
         <RelativeLayout
             android:id="@+id/bottom_content"
             android:layout_width="wrap_content"
