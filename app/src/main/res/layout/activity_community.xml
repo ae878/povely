@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     tools:context="com.example.mimi.povely.MainActivity"
     android:background="#fff">
+
     <TextView
         android:id="@+id/top_bar"
         android:layout_width="match_parent"
@@ -16,64 +17,20 @@
         android:text="Povely"
         android:textColor="#333"
         android:textSize="27dp"
-<<<<<<< HEAD
         android:background="#fff"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
-
-=======
-        android:background="#fff"/>
->>>>>>> 3fec8cb6ed4f63e955f946aa31c7d277debc24bd
     <View
         android:id="@+id/top_bar_divider"
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="#ffcccccc"
         android:layout_below="@id/top_bar"/>
+
+
     <LinearLayout
-<<<<<<< HEAD
-=======
-        android:id="@+id/commuinty_bar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/top_bar_divider">
-        <Button
-            android:id="@+id/bbom"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="#fff"
-            android:text="누렁이뽐내기"
-            android:textColor="#555"
-            android:onClick="onClickBbom"/>
-        <Button
-            android:id="@+id/board"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="#fff"
-            android:text="게시판"
-            android:textColor="#555"
-            android:onClick="onClickBoard"/>
-        <Button
-            android:id="@+id/market"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="#fff"
-            android:text="장터"
-            android:textColor="#555"
-            android:onClick="onClickMarket"/>
-    </LinearLayout>
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="#ffcccccc"
-        android:layout_below="@id/commuinty_bar"/>
-    <LinearLayout
->>>>>>> 3fec8cb6ed4f63e955f946aa31c7d277debc24bd
         android:id="@+id/bottom_bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -157,17 +114,19 @@
                 android:layout_width="33dp"
                 android:layout_height="33dp"
                 android:layout_centerHorizontal="true"
-                android:background="@drawable/plus"
-                android:onClick="onClickCommunityPlus"/>
+                android:background="@drawable/community_button"
+                android:onClick="onClickCommunity"
+                />
             <TextView
                 android:layout_below="@id/to_community"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
-                android:text="글쓰기"
+                android:text="커뮤니티"
                 android:textSize="10dp"
                 android:textColor="#ff888888"
-                android:onClick="onClickCommunityPlus"/>
+                android:onClick="onClickCommunity"
+                />
         </RelativeLayout>
         <RelativeLayout
             android:layout_width="0dp"
@@ -192,23 +151,118 @@
                 android:textColor="#ff888888"/>
         </RelativeLayout>
     </LinearLayout>
+
     <View
+        android:id="@+id/bottom_bar_divider"
         android:layout_width="match_parent"
-        android:layout_height="0.5dp"
+        android:layout_height="1dp"
         android:background="#ffcccccc"
-<<<<<<< HEAD
         android:layout_above="@id/bottom_bar">
     </View>
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#ffcccccc"
+        android:layout_below="@id/top_bar"/>
+
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_above="@id/bottom_bar"
-        android:layout_below="@id/top_bar">
+        android:layout_height="wrap_content"
+        android:weightSum="3"
+        android:paddingTop="5dp"
+        android:paddingBottom="3dp"
+        android:background="#FFFFFF"
+        android:orientation="vertical"
+        android:layout_below="@+id/top_bar_divider"
+        android:layout_above="@id/bottom_bar_divider">
+
+        <RelativeLayout
+            android:id="@+id/market"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <View
+                android:id="@+id/divider1"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentBottom="true"
+                android:background="#ffcccccc"></View>
+
+            <ImageButton
+                android:id="@+id/to_market"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/market_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/to_market"
+                android:layout_centerHorizontal="true"
+                android:text="펫마켓"
+                android:textColor="#ff888888"
+                android:textSize="20dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/petstagram"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <View
+                android:id="@+id/divider2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentBottom="true"
+                android:background="#ffcccccc" />
+
+            <ImageButton
+                android:id="@+id/to_petstagram"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/social_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/to_petstagram"
+                android:layout_centerHorizontal="true"
+                android:text="펫스타그램"
+                android:textColor="#ff888888"
+                android:textSize="20dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/board"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <ImageButton
+                android:id="@+id/to_board"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/board_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/to_board"
+                android:layout_centerHorizontal="true"
+                android:onClick="onClickGallery"
+                android:text="게시판"
+                android:textColor="#ff888888"
+                android:textSize="20dp" />
+        </RelativeLayout>
 
     </LinearLayout>
 
-=======
-        android:layout_above="@id/bottom_bar"/>
->>>>>>> 3fec8cb6ed4f63e955f946aa31c7d277debc24bd
 </RelativeLayout>

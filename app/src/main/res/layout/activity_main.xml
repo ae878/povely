@@ -41,7 +41,7 @@
     <Button
         android:id="@+id/cover_plus"
         android:layout_width="wrap_content"
-        android:layout_height="55dp"
+        android:layout_height="50dp"
         android:background="#fff"
         android:text="+"
         android:textColor="#555"
