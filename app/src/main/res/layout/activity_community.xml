@@ -18,7 +18,9 @@
         android:textColor="#333"
         android:textSize="27dp"
         android:background="#fff"
-        />
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
 
     <View
@@ -27,51 +29,6 @@
         android:layout_height="1dp"
         android:background="#ffcccccc"
         android:layout_below="@id/top_bar">
-    </View>
-
-    <LinearLayout
-        android:id="@+id/commuinty_bar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/top_bar_divider">
-
-        <Button
-            android:id="@+id/bbom"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="#fff"
-            android:text="누렁이뽐내기"
-            android:textColor="#555"
-            android:onClick="onClickBbom"/>
-
-        <Button
-            android:id="@+id/board"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="#fff"
-            android:text="게시판"
-            android:textColor="#555"
-            android:onClick="onClickBoard"/>
-
-        <Button
-            android:id="@+id/market"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="#fff"
-            android:text="장터"
-            android:textColor="#555"
-            android:onClick="onClickMarket"/>
-
-    </LinearLayout>
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="#ffcccccc"
-        android:layout_below="@id/commuinty_bar">
     </View>
 
     <LinearLayout
@@ -205,5 +162,13 @@
         android:background="#ffcccccc"
         android:layout_above="@id/bottom_bar">
     </View>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottom_bar"
+        android:layout_below="@id/top_bar">
+
+    </LinearLayout>
 
 </RelativeLayout>
