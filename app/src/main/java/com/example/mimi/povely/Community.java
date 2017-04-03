@@ -51,4 +51,9 @@ public class Community extends BaseActivity {
         // overridePendingTransition(0, 0);
 
     }
+
+    public void onClickMarket(View v){
+        Intent intent = new Intent(getApplicationContext(), PetMarket.class );
+        startActivity(intent);
+    }
 }

@@ -27,6 +27,7 @@
         <activity android:name=".BaseActivity"/>
         <activity android:name=".NewMember"/>
         <activity android:name=".Gallery"/>
+        <activity android:name=".PetMarket"/>
 
     </application>
 

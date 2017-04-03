@@ -181,8 +181,7 @@
             android:id="@+id/market"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:gravity="center">
+            android:layout_weight="1">
 
             <View
                 android:id="@+id/divider1"
@@ -196,7 +195,8 @@
                 android:layout_width="110dp"
                 android:layout_height="110dp"
                 android:layout_centerInParent="true"
-                android:background="@drawable/market_icon" />
+                android:background="@drawable/market_icon"
+                android:onClick="onClickMarket"/>
 
             <TextView
                 android:layout_width="wrap_content"
