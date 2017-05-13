@@ -6,6 +6,10 @@
     android:layout_height="match_parent"
     tools:context="com.example.mimi.povely.MainActivity"
     android:background="#fff">
+<<<<<<< HEAD
+
+    </RelativeLayout>
+=======
 
     <TextView
         android:id="@+id/top_bar"
@@ -266,3 +270,4 @@
     </LinearLayout>
 
 </RelativeLayout>
+>>>>>>> fc2ee29505a7e37e32fb222e4be21d85008aa89f

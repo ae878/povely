@@ -1,5 +1,6 @@
 package com.example.mimi.povely;
 
+import android.app.Activity;
 import android.app.DatePickerDialog;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -49,7 +50,7 @@ public class Diarynew extends BaseActivity {
     static String SAMPLEIMG="ic_launcher.png";
 
     PhotoListAdapter adapter = null;
-    Gallery lv = null;
+    HorizontalListView lv = null;
 
     SimpleDateFormat sdfNow = new SimpleDateFormat("yyyy. MM. dd.   ", Locale.KOREA);
     Date date = new Date();
@@ -73,6 +74,7 @@ public class Diarynew extends BaseActivity {
         findViewById(R.id.go_back_in_diary_new).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                hide_keyboard();
                 finish();
             }
         });
@@ -81,10 +83,8 @@ public class Diarynew extends BaseActivity {
         date_view.setText(formatDate);
 
         adapter = new PhotoListAdapter(this);
-        //lv = (ListView)findViewById(R.id.photo_list);
-        //lv.setAdapter(adapter);
-        android.widget.Gallery gallery = (android.widget.Gallery)findViewById(R.id.photo_list);
-        gallery.setAdapter(adapter);
+        lv = (HorizontalListView) findViewById(R.id.photo_list);
+        lv.setAdapter(adapter);
 
         diary_title.addTextChangedListener(new TextWatcher() {
             String strCur;
@@ -121,6 +121,7 @@ public class Diarynew extends BaseActivity {
     }
 
     public void select_date(View v) {
+        hide_keyboard();
         DatePickerDialog dialog = new DatePickerDialog(this, listener, Integer.parseInt(year),
                 Integer.parseInt(month) - 1, Integer.parseInt(day));
         dialog.show();
@@ -135,6 +136,7 @@ public class Diarynew extends BaseActivity {
     };
 
     public void Camera_Upload(View v) {
+        hide_keyboard();
         DialogInterface.OnClickListener cameraListener = new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
@@ -217,5 +219,9 @@ public class Diarynew extends BaseActivity {
                 }
             }
         }
+    }
+    public void hide_keyboard() {
+        InputMethodManager immhide = (InputMethodManager) getSystemService(Activity.INPUT_METHOD_SERVICE);
+        immhide.toggleSoftInput(InputMethodManager.HIDE_IMPLICIT_ONLY, 0);
     }
 }

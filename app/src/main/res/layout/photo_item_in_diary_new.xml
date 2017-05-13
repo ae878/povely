@@ -7,4 +7,10 @@
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:scaleType="fitXY"/>
+    <Button
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:text="x"
+        android:id="@+id/delete_photo"
+        android:layout_below="@id/photo_item"/>
 </RelativeLayout>
