@@ -43,55 +43,50 @@
         android:layout_below="@id/top_bar">
     </View>
 
-    <RelativeLayout
+    <LinearLayout
+        android:id="@+id/market_bar"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@id/top_bar_divider"
-        android:layout_above = "@id/bottom_bar_divider">
+        android:layout_height="wrap_content"
+        android:layout_below="@id/top_bar_divider">
 
-        <LinearLayout
-            android:id="@+id/market_bar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/popular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#fff"
+            android:text="인기상품"
+            android:textColor="#555"
+            android:onClick="onClickBbom"/>
+        <Button
+            android:id="@+id/board"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#fff"
+            android:text="최신상품"
+            android:textColor="#555"
+            android:onClick="onClickBoard"/>
+        <Button
+            android:id="@+id/market"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#fff"
+            android:text="중고상품"
+            android:textColor="#555"
+            android:onClick="onClickMarket"/>
 
-            <Button
-                android:id="@+id/popular"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="#fff"
-                android:text="인기상품"
-                android:textColor="#555"
-                android:onClick="onClickBbom"/>
-            <Button
-                android:id="@+id/board"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="#fff"
-                android:text="최신상품"
-                android:textColor="#555"
-                android:onClick="onClickBoard"/>
-            <Button
-                android:id="@+id/market"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="#fff"
-                android:text="중고상품"
-                android:textColor="#555"
-                android:onClick="onClickMarket"/>
+    </LinearLayout>
 
-        </LinearLayout>
+    <View
+        android:id="@+id/second_bar_divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#ffcccccc"
+        android:layout_below="@id/market_bar">
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="#ffcccccc"
-            android:layout_below="@id/market_bar"
-        ></View>
-
-    </RelativeLayout>
+    </View>
 
     <LinearLayout
         android:id="@+id/bottom_bar"
@@ -224,7 +219,17 @@
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="#ffcccccc"
-        android:layout_above="@id/bottom_bar"
-        ></View>
+        android:layout_above="@id/bottom_bar">
+
+    </View>
+
+    <ListView
+        android:id="@+id/item_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/second_bar_divider"
+        android:layout_above="@id/bottom_bar_divider">
+
+    </ListView>
 
 </RelativeLayout>
