@@ -19,9 +19,14 @@
             android:background="#fff"
             >
             <ImageView
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
                 android:id="@+id/item_image"
                 android:layout_width="140dp"
-                android:layout_height="140dp"/>
+                android:layout_height="140dp"
+                android:background="@mipmap/ic_launcher"/>
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -42,7 +47,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="추천:"
-                    android:textSize="15dp"
+                    android:textSize="17dp"
                     android:textColor="#333"
                     android:layout_below="@id/item_name"/>
                 <TextView
@@ -52,17 +57,17 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/item_name"
-                    android:textSize="15dp"
+                    android:textSize="17dp"
                     android:ems="2"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="30dp"
+                    android:textSize="25dp"
                     android:id="@+id/item_price"
                     android:layout_alignParentBottom="true"
                     android:layout_marginBottom="20dp"
-                    android:ems="5"
+                    android:ems="6"
                     android:layout_marginLeft="10dp"
                     android:textColor="#333"
                     />
@@ -74,7 +79,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="원"
-                    android:textSize="30dp"
+                    android:textSize="25dp"
                     android:textColor="#333"/>
             </RelativeLayout>
 
