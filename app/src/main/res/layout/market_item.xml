@@ -32,16 +32,17 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
                 <TextView
+                    android:text="신상품 어쩌고저쩌고"
                     android:layout_marginLeft="10dp"
                     android:textColor="#333"
                     android:id="@+id/item_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:ems="10"
-                    android:textSize="20dp"
+                    android:textSize="22dp"
                     android:layout_marginTop="10dp"/>
                 <TextView
-                    android:layout_marginTop="5dp"
+                    android:layout_marginTop="10dp"
                     android:layout_marginLeft="10dp"
                     android:id="@+id/item_like_number"
                     android:layout_width="wrap_content"
@@ -51,16 +52,19 @@
                     android:textColor="#333"
                     android:layout_below="@id/item_name"/>
                 <TextView
-                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginTop="10dp"
                     android:layout_toRightOf="@id/item_like_number"
                     android:textColor="#333"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/item_name"
-                    android:textSize="17dp"
+                    android:textSize="18dp"
+                    android:text="600"
                     android:ems="2"/>
 
                 <TextView
+                    android:gravity="right"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="25dp"
@@ -70,6 +74,7 @@
                     android:ems="6"
                     android:layout_marginLeft="10dp"
                     android:textColor="#333"
+                    android:text="75000"
                     />
 
                 <TextView
