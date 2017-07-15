@@ -18,6 +18,7 @@
             android:orientation="horizontal"
             android:background="#fff"
             >
+
             <ImageView
                 android:layout_marginTop="5dp"
                 android:layout_marginBottom="5dp"
@@ -26,13 +27,13 @@
                 android:id="@+id/item_image"
                 android:layout_width="140dp"
                 android:layout_height="140dp"
-                android:background="@mipmap/ic_launcher"/>
+                android:background="@drawable/hi"/>
 
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
                 <TextView
-                    android:text="신상품 어쩌고저쩌고"
+                    android:text="개사료"
                     android:layout_marginLeft="10dp"
                     android:textColor="#333"
                     android:id="@+id/item_name"
