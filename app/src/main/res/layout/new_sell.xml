@@ -33,6 +33,16 @@
             android:layout_marginLeft="10dp"
             android:onClick="onClickGoBack"/>
 
+        <Button
+            android:id="@+id/finish_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="#fff"
+            android:text="등록"
+            android:textColor="#333"
+            android:textSize="16dp"/>
+
     </RelativeLayout>
 
     <View
@@ -43,5 +53,102 @@
         android:layout_below="@id/top_bar">
     </View>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/top_bar_divider"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/insert_item_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:hint="아이템 이름"
+            android:gravity="center"
+            android:textColorHint="#FF0000"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#ffcccccc"
+            >
+        </View>
+
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFF">
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="사진 추가"
+                android:background="#FFF"
+                android:textColor="#FF0000"
+                android:layout_gravity="center"
+                android:textSize="15dp"
+                />
+            <com.example.mimi.povely.HorizontalListView
+                android:id="@+id/item_photo_list"
+                android:layout_width="match_parent"
+                android:layout_height="88dp"
+                android:layout_alignParentTop="true"
+                android:background="#fff"
+                />
+            <View
+                android:layout_below="@id/photo_list"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#ffcccccc" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/category_select"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="카테고리 선택"
+            android:textColor="#FF0000"
+            android:textSize="16dp"
+            android:background="#AFEEEE"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#ffcccccc"
+            android:layout_marginTop="6dp">
+
+        </View>
+
+        <EditText
+            android:id="@+id/item_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="희망 가격"
+            android:textColorHint="#FF0000"
+            android:gravity="center"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#ffcccccc"
+            >
+
+        </View>
+
+        <EditText
+            android:id="@+id/extra_info"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="추가 정보"
+            android:textColorHint="#FF0000"
+            android:gravity="center"/>
+
+    </LinearLayout>
 
 </RelativeLayout>
