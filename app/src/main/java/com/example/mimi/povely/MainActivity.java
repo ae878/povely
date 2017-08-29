@@ -91,7 +91,6 @@ public class MainActivity extends BaseActivity {
             if (requestCode == 0 && resultCode == RESULT_OK && null != data) {
                 //data에서 절대경로로 이미지를 가져옴
                 Uri uri = data.getData();
-
                 Bitmap bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(),uri);
                 //이미지가 한계이상(?) 크면 불러 오지 못하므로 사이즈를 줄여 준다.
                 int nh = (int) (bitmap.getHeight() * (1024.0 / bitmap.getWidth()));
@@ -104,8 +103,7 @@ public class MainActivity extends BaseActivity {
             Toast.makeText(this, "Oops! 로딩에 오류가 있습니다.", Toast.LENGTH_LONG).show();
             e.printStackTrace();
         }
-
     }
-
-
 }
+
+

@@ -21,6 +21,7 @@
         android:background="#ffcccccc"
         android:layout_below="@id/top_bar_in_gallery">
     </View>
+
     <LinearLayout
         android:id="@+id/bottom_bar_in_gallery"
         android:layout_width="match_parent"
@@ -141,5 +142,34 @@
         android:background="#ffcccccc"
         android:layout_above="@id/bottom_bar_in_diary_list">
     </View>
+
+    <TextView
+        android:id="@+id/user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#ff0"
+        android:textColor="#000"
+        android:textSize="30dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/top_bar_divider"
+        android:layout_marginTop="35dp"
+        android:text="before" />
+
+    <TextView
+        android:id="@+id/title__"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#ff0"
+        android:textColor="#000"
+        android:textSize="30dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/user"
+        android:layout_marginTop="39dp"
+        android:text="before" />
+    <ImageView
+        android:id="@+id/img_test"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@id/title__"/>
 
 </RelativeLayout>

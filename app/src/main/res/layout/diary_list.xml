@@ -6,34 +6,38 @@
     android:layout_height="match_parent"
     tools:context="com.example.mimi.povely.MainActivity"
     android:background="#fff">
-    <TextView
-        android:id="@+id/top_bar_in_diary_list"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingTop="10dp"
-        android:paddingBottom="10dp"
-        android:gravity="center_horizontal"
-        android:text="Povely"
-        android:textColor="#333"
-        android:textSize="27dp"
-        android:background="#fff"/>
-    <View
-        android:id="@+id/top_bar_divider"
-        android:layout_width="match_parent"
-        android:layout_height="0.5dp"
-        android:background="#ffcccccc"
-        android:layout_below="@id/top_bar_in_diary_list">
-    </View>
-    <TextView
-        android:id="@+id/which_diary"
+    <RelativeLayout
+        android:id="@+id/top_bar"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/top_bar_divider"
-        android:layout_centerHorizontal="true"
-        android:onClick="slide_menu"
-        android:text="기본 일기장 >"
-        android:textColor="#000"
-        android:textSize="20dp" />
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/top_bar_in_diary_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:gravity="center_horizontal"
+            android:text="Povely"
+            android:textColor="#333"
+            android:textSize="27dp"
+            android:background="#fff"/>
+        <ImageButton
+            android:id="@+id/delete_diary"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:background="@drawable/delete_diary_button"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:onClick="delete_diary"/>
+        <View
+            android:id="@+id/top_bar_divider"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#ffcccccc"
+            android:layout_below="@id/top_bar_in_diary_list">
+        </View>
+    </RelativeLayout>
     <LinearLayout
         android:id="@+id/bottom_bar_in_diary_list"
         android:layout_width="match_parent"
@@ -153,11 +157,13 @@
         android:layout_above="@id/bottom_bar_in_diary_list">
     </View>
     <ListView
+        android:id="@+id/diary_list"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:dividerHeight="1dp"
+        android:dividerHeight="0.3dp"
         android:divider="#ddd"
-        android:layout_below="@id/top_bar_divider"
+        android:layout_margin="10dp"
+        android:layout_below="@id/top_bar"
         android:layout_above="@id/bottom_bar_divider">
     </ListView>
 </RelativeLayout>

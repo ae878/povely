@@ -6,11 +6,6 @@
     android:layout_height="match_parent"
     tools:context="com.example.mimi.povely.MainActivity"
     android:background="#fff">
-<<<<<<< HEAD
-
-    </RelativeLayout>
-=======
-
     <TextView
         android:id="@+id/top_bar"
         android:layout_width="match_parent"
@@ -155,7 +150,6 @@
                 android:textColor="#ff888888"/>
         </RelativeLayout>
     </LinearLayout>
-
     <View
         android:id="@+id/bottom_bar_divider"
         android:layout_width="match_parent"
@@ -163,13 +157,11 @@
         android:background="#ffcccccc"
         android:layout_above="@id/bottom_bar">
     </View>
-
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="#ffcccccc"
         android:layout_below="@id/top_bar"/>
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -180,28 +172,24 @@
         android:orientation="vertical"
         android:layout_below="@+id/top_bar_divider"
         android:layout_above="@id/bottom_bar_divider">
-
         <RelativeLayout
             android:id="@+id/market"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center">
-
             <View
                 android:id="@+id/divider1"
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:layout_alignParentBottom="true"
                 android:background="#ffcccccc"></View>
-
             <ImageButton
                 android:id="@+id/to_market"
                 android:layout_width="110dp"
                 android:layout_height="110dp"
                 android:layout_centerInParent="true"
                 android:background="@drawable/market_icon" />
-
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -211,20 +199,17 @@
                 android:textColor="#ff888888"
                 android:textSize="20dp" />
         </RelativeLayout>
-
         <RelativeLayout
             android:id="@+id/petstagram"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1">
-
             <View
                 android:id="@+id/divider2"
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:layout_alignParentBottom="true"
                 android:background="#ffcccccc" />
-
             <ImageButton
                 android:id="@+id/to_petstagram"
                 android:layout_width="100dp"
@@ -241,21 +226,18 @@
                 android:textColor="#ff888888"
                 android:textSize="20dp" />
         </RelativeLayout>
-
         <RelativeLayout
             android:id="@+id/board"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center">
-
             <ImageButton
                 android:id="@+id/to_board"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_centerHorizontal="true"
                 android:background="@drawable/board_icon" />
-
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -266,8 +248,5 @@
                 android:textColor="#ff888888"
                 android:textSize="20dp" />
         </RelativeLayout>
-
     </LinearLayout>
-
 </RelativeLayout>
->>>>>>> fc2ee29505a7e37e32fb222e4be21d85008aa89f

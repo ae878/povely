@@ -25,16 +25,17 @@
             android:background="@drawable/x_button"
             android:layout_alignParentLeft="true"
             android:layout_centerVertical="true"
-            android:layout_marginLeft="10dp"/>
+            android:layout_marginLeft="10dp"
+            android:onClick="goBack"/>
         <ImageButton
             android:id="@+id/make_new_diary"
             android:layout_width="34dp"
             android:layout_height="34dp"
-            android:background="@drawable/check_button"
+            android:background="@drawable/edit_diary"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
             android:layout_marginRight="10dp"
-            android:onClick="complete_btn"/>
+            android:onClick="goEdit"/>
         <View
             android:layout_width="match_parent"
             android:layout_height="0.5dp"
@@ -50,7 +51,7 @@
         <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
-            <EditText
+            <TextView
                 android:id="@+id/diary_title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -87,16 +88,6 @@
                 android:textSize="14dp"
                 android:text="0"
                 android:textColor="#0088cc"/>
-            <ImageButton
-                android:layout_width="16.5dp"
-                android:layout_height="16.5dp"
-                android:background="@drawable/cross"
-                android:layout_marginRight="20dp"
-                android:onClick="delete_title"
-                android:layout_marginEnd="10dp"
-                android:id="@+id/imageButton3"
-                android:layout_centerVertical="true"
-                android:layout_toStartOf="@id/now_length" />
         </RelativeLayout>
         <View
             android:layout_width="match_parent"
@@ -125,24 +116,6 @@
                 android:layout_toRightOf="@id/make_date"
                 android:layout_marginLeft="5dp"
                 android:background="@drawable/callendar"/>
-            <ImageButton
-                android:id="@+id/video"
-                android:layout_alignParentRight="true"
-                android:layout_centerVertical="true"
-                android:layout_marginRight="10dp"
-                android:layout_width="33dp"
-                android:layout_height="33dp"
-                android:background="@drawable/video"
-                android:onClick="Camera_Video_Upload"/>
-            <ImageButton
-                android:id="@+id/camera"
-                android:layout_toLeftOf="@id/video"
-                android:layout_marginRight="17dp"
-                android:layout_width="33dp"
-                android:layout_height="33dp"
-                android:layout_centerVertical="true"
-                android:background="@drawable/camera"
-                android:onClick="Camera_Upload"/>
             <View
                 android:layout_below="@id/make_date"
                 android:layout_width="match_parent"
@@ -156,21 +129,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="#fff">
-            <HorizontalScrollView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
-                <LinearLayout
-                    android:id="@+id/photo_list"
-                    android:layout_width="match_parent"
-                    android:layout_height="88dp"
-                    android:layout_alignParentTop="true"
-                    android:background="#fff"
-                    android:orientation="horizontal"
-                    android:gravity="center_vertical"
-                    android:paddingLeft="10dp"
-                    android:paddingRight="10dp"
-                    />
-            </HorizontalScrollView>
+            <ListView
+                android:id="@+id/photo_list"
+                android:layout_width="match_parent"
+                android:layout_height="88dp"
+                android:layout_alignParentTop="true"
+                android:background="#fff"
+                />
             <View
                 android:layout_below="@id/photo_list"
                 android:layout_width="match_parent"
@@ -188,14 +153,13 @@
                 android:orientation="vertical"
                 android:layout_marginTop="10dp"
                 android:onClick="input_content">
-                <EditText
+                <TextView
                     android:id="@+id/diary_content"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="13dp"
                     android:layout_marginRight="13dp"
                     android:background="@null"
-                    android:hint="내용을 입력해 주세요"
                     android:textColor="#000"
                     android:textColorHint="#888"
                     android:textSize="18dp" />
