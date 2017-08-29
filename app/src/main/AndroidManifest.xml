@@ -28,6 +28,7 @@
         <activity android:name=".NewMember"/>
         <activity android:name=".Gallery"/>
         <activity android:name=".PetMarket"/>
+        <activity android:name=".NewSell"/>
 
     </application>
 

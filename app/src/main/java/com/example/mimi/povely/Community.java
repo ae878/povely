@@ -55,5 +55,6 @@ public class Community extends BaseActivity {
     public void onClickMarket(View v){
         Intent intent = new Intent(getApplicationContext(), PetMarket.class );
         startActivity(intent);
+        finish();
     }
 }

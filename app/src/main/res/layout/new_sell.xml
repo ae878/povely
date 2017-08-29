@@ -67,21 +67,16 @@
             android:hint="아이템 이름"
             android:gravity="center"
             android:textColorHint="#FF0000"
+            android:textColor="#FF0000"
             />
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="#ffcccccc"
-            >
-        </View>
 
         <LinearLayout
             xmlns:android="http://schemas.android.com/apk/res/android"
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#FFF">
+            android:background="#FFF"
+            android:layout_marginTop="5dp">
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -105,25 +100,7 @@
                 android:background="#ffcccccc" />
         </LinearLayout>
 
-        <Button
-            android:id="@+id/category_select"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="카테고리 선택"
-            android:textColor="#FF0000"
-            android:textSize="16dp"
-            android:background="#AFEEEE"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:layout_marginTop="10dp"/>
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="#ffcccccc"
-            android:layout_marginTop="6dp">
-
-        </View>
 
         <EditText
             android:id="@+id/item_price"
@@ -131,7 +108,8 @@
             android:layout_height="wrap_content"
             android:hint="희망 가격"
             android:textColorHint="#FF0000"
-            android:gravity="center"/>
+            android:gravity="center"
+            android:textColor="#FF0000"/>
 
         <View
             android:layout_width="match_parent"
@@ -147,7 +125,8 @@
             android:layout_height="match_parent"
             android:hint="추가 정보"
             android:textColorHint="#FF0000"
-            android:gravity="center"/>
+            android:gravity="center_horizontal"
+            android:textColor="#FF0000"/>
 
     </LinearLayout>
 

@@ -2,6 +2,7 @@ package com.example.mimi.povely;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.ListView;
 
@@ -11,7 +12,7 @@ import android.widget.ListView;
 
 public class PetMarket extends BaseActivity{
 
-    ListView itemList;
+    RecyclerView itemList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,13 +21,19 @@ public class PetMarket extends BaseActivity{
 
         getWindow().setWindowAnimations(0); // acitivity 효과 없애기
 
-        itemList = (ListView)findViewById(R.id.item_list);
+        itemList = (RecyclerView)findViewById(R.id.item_list);
         itemList = null;
 
     }
 
     public void onClickGoBack(View v){
         Intent intent = new Intent(getApplicationContext(), Community.class);
+        startActivity(intent);
+        finish();
+    }
+
+    public void onClickNewSell(View v){
+        Intent intent = new Intent(getApplicationContext(), NewSell.class);
         startActivity(intent);
         finish();
     }
