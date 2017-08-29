@@ -6,6 +6,10 @@
     android:layout_height="match_parent"
     tools:context="com.example.mimi.povely.MainActivity"
     android:background="#fff">
+<<<<<<< HEAD
+=======
+
+>>>>>>> 824450105df670cb9936c2fa637ab4c02eebdbd2
     <TextView
         android:id="@+id/top_bar"
         android:layout_width="match_parent"
@@ -176,8 +180,13 @@
             android:id="@+id/market"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+<<<<<<< HEAD
             android:layout_weight="1"
             android:gravity="center">
+=======
+            android:layout_weight="1">
+
+>>>>>>> 824450105df670cb9936c2fa637ab4c02eebdbd2
             <View
                 android:id="@+id/divider1"
                 android:layout_width="match_parent"
@@ -189,7 +198,13 @@
                 android:layout_width="110dp"
                 android:layout_height="110dp"
                 android:layout_centerInParent="true"
+<<<<<<< HEAD
                 android:background="@drawable/market_icon" />
+=======
+                android:background="@drawable/market_icon"
+                android:onClick="onClickMarket"/>
+
+>>>>>>> 824450105df670cb9936c2fa637ab4c02eebdbd2
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

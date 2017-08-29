@@ -15,7 +15,6 @@
         <activity android:name=".Login">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -29,5 +28,7 @@
         <activity android:name=".NewMember"/>
         <activity android:name=".Gallery"/>
         <activity android:name=".DiaryShow"/>
+        <activity android:name=".PetMarket"/>
+        <activity android:name=".NewSell"/>
     </application>
 </manifest>
